@@ -31,13 +31,13 @@ public class EdgeGlowUtil {
                 EdgeEffect ee = (EdgeEffect) edgeGlowTop.get(listView);
                 if (ee == null) {
                     ee = new EdgeEffect(listView.getContext());
-                    edgeGlowTop.set(listView, ee);
+                    // edgeGlowTop.set(listView, ee);
                 }
                 ee.setColor(color);
                 ee = (EdgeEffect) edgeGlowBottom.get(listView);
                 if (ee == null) {
                     ee = new EdgeEffect(listView.getContext());
-                    edgeGlowBottom.set(listView, ee);
+                    // edgeGlowBottom.set(listView, ee);
                 }
                 ee.setColor(color);
             } catch (Exception ex) {
@@ -164,6 +164,6 @@ public class EdgeGlowUtil {
         field.setAccessible(true);
         EdgeEffect effect = (EdgeEffect) field.get(edgeEffect);
         if (effect != null)
-            effect.setColor(color);
+            // effect.setColor(color);
     }
 }
