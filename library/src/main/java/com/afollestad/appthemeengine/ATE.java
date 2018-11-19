@@ -256,7 +256,7 @@ public final class ATE extends ATEBase {
         color = Util.stripAlpha(color);
         // Default is app's launcher icon
         if (icon == null)
-            icon = ((BitmapDrawable) activity.getApplicationInfo().loadIcon(activity.getPackageManager())).getBitmap();
+            icon = getBitmapFromDrawable(activity.getApplicationInfo().loadIcon(activity.getPackageManager()));
 
         // Sets color of entry in the system recents page
         ActivityManager.TaskDescription td = new ActivityManager.TaskDescription(
